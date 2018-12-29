@@ -83,10 +83,13 @@ const BlogPostWithSubscription = withSubscription(
     (DataSource, props) => DataSource.getBlogPost(props.id)
 );
 
+// 现在的CommentList, BlogPost包含什么内容呢 ??? 仅 reder ？
 
+// 高阶组件、
 // 函数接受一个组件参数……
 function withSubscription(WrappedComponent, selectData) {
-    // ……返回另一个新组件……
+    
+  // ……返回另一个新组件……
     return class extends React.Component {
       constructor(props) {
         super(props);

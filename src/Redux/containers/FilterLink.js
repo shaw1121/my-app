@@ -2,6 +2,10 @@ import {connect} from 'react-redux'
 import {setVisibilityFilter} from '../actions'
 import Link from '../components/Link'
 
+// FilterLink 得到当前过滤器并渲染 Link。
+// filter: string 就是当前过滤的状态
+
+// 指定如何把当前 Redux store state 映射到展示组件的 props 中
 const mapStateToProps = (state, ownProps) => {
     return {
         active: ownProps.filter === state.visibilityFilter
